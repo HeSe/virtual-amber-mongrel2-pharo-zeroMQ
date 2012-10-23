@@ -4,7 +4,7 @@ Gofer new
   load. 
 
 ((Smalltalk at: #ConfigurationOfRFB) 
-    project version: #stable) load. 
+    project version: #'bleedingEdge') load. 
 
 RFBServer current
           initializePreferences;
@@ -13,7 +13,8 @@ RFBServer current
           allowRemoteConnections: true;
           allowInteractiveConnections: true;
           connectionTypeDisconnect;
-          configureForMemoryConservation.
+          allowZRLE: false; 
+          setFullPassword: 'vagrant'.
 
 RFBServer start:0.
 

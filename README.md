@@ -8,9 +8,14 @@ This virtual appliance will include Amber, Amber-ZeroMQ, Mongrel2, Pharo 1.4 (in
 
 Prerequsites
 --------  
+
 * VirtualBox
 * Vagrant
 * Vagrant base box (e.g. lucid32)
+
+optional:
+
+* TightVNC 1.3.10 (newer versions for Windows won't connect, Linux unknown, password is 'vagrant')
 
 Installation
 -------

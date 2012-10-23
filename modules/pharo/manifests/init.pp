@@ -77,6 +77,14 @@ class pharo {
 	exec { "install ZeroMQ":
 		command  => "/opt/Pharo-1.4-one-click-headless.sh /opt/installZeroMQScript.st ",
 		cwd      => "/opt/Pharo-1.4-one-click.app/",
+		before   => Exec["copy ZeroMQ"],
+		path     => "/usr/bin:/usr/sbin:/bin",
+	}
+	
+	# copy ZeroMQ
+	exec { "copy ZeroMQ":
+		command    => "cp /usr/local/lib/libzmq.so /opt/Pharo-1.4-one-click.app/zmq.so",
+		cwd      => "/opt/Pharo-1.4-one-click.app/",
 		path     => "/usr/bin:/usr/sbin:/bin",
 	}
 
