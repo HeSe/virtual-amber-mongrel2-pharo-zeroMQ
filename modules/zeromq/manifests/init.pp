@@ -1,7 +1,7 @@
 class zeromq {
 	include uuid
 	include wget
-	include build
+	include buildessentials
         include unzip
 
 	$version = "2.1.11"
