@@ -20,3 +20,8 @@ optional:
 Installation
 -------
 about to come
+
+Usage
+-------
+Once you created the virtual server just access http://33.33.33.10 and Amber shall show up
+The ZeroMQ WebBrige connected to Pharo via Mongrel2 is soon to come 
