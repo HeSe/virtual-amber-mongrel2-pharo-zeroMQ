@@ -1,0 +1,16 @@
+{
+	"category" : "Amber-ZeroMQ-Server-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"zmqPullSocket",
+		"running",
+		"zmqPubSocket" ],
+	"name" : "ZMQAmberResponseExample",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

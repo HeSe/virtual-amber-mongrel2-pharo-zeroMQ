@@ -1,3 +1,4 @@
 include mongrel2
-include pharo
-include amber
+include pharo0mqbridge
+include amber0mq
+include installservices

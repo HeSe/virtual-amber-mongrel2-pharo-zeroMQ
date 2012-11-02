@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"startExample" : "SebastianHeidbrink 10/23/2012 20:44" },
+	"instance" : {
+		"initialize" : "SebastianHeidbrink 10/23/2012 20:44",
+		"processMessage:" : "SebastianHeidbrink 10/22/2012 23:46",
+		"run" : "SebastianHeidbrink 10/21/2012 23:49",
+		"running" : "SebastianHeidbrink 10/21/2012 18:51",
+		"running:" : "SebastianHeidbrink 10/21/2012 18:51",
+		"stop" : "SebastianHeidbrink 10/21/2012 19:04",
+		"workerBlock" : "SebastianHeidbrink 10/22/2012 23:34",
+		"zmqPubSocket" : "SebastianHeidbrink 10/22/2012 23:18",
+		"zmqPubSocket:" : "SebastianHeidbrink 10/22/2012 23:19",
+		"zmqPullSocket" : "SebastianHeidbrink 10/22/2012 23:18",
+		"zmqPullSocket:" : "SebastianHeidbrink 10/22/2012 23:19" } }
