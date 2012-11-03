@@ -1,10 +1,10 @@
 |repo|
 
-repo := MCFileTreeRepository new directory: (FileDirectory on: '//opt/pharozmqwebbridge').
+repo := MCFileTreeRepository new directory: (FileDirectory on: '//opt/pharo-zeroMQWebBridge').
 
 Gofer new
     repository: repo;
-    package: 'Amber-ZeroMQ';
+    package: 'ZeroMQWebBridge';
     load.
 
 Author fullName: 'SebastianHeidbrink'.

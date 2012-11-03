@@ -83,10 +83,12 @@ class pharo {
 	
 	# copy ZeroMQ
 	exec { "copy ZeroMQ":
-		command    => "cp /usr/local/lib/libzmq.so /opt/Pharo-1.4-one-click.app/zmq.so",
+		command  => "cp /usr/local/lib/libzmq.so /opt/Pharo-1.4-one-click.app/zmq.so",
 		cwd      => "/opt/Pharo-1.4-one-click.app/",
 		path     => "/usr/bin:/usr/sbin:/bin",
 	}
+	
+
 
 
 }

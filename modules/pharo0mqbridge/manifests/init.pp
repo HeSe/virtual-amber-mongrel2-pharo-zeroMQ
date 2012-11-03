@@ -6,15 +6,18 @@ class pharo0mqbridge {
              source => "puppet:///modules/pharo0mqbridge/installPharo0MQBridgeScript.st"
          }
 
+	# get the sources
+	exec {"get Pharo0MQBridge":
+               path => ["/bin", "/usr/bin", "/usr/local/bin"],
+               cwd => "/opt",
+               command  => "git clone git://github.com/HeSe/pharo-zeroMQWebBridge.git ",
+	       creates => "/opt/pharo-zeroMQWebBridge",
+	       before   => Exec["install Pharo0MQBridge"],  
+               require => [Class["pharo"] , Package["git-core"]]
+      }
 
-         file { "/opt/pharozmqwebbridge":
-             ensure => directory,
-             source => "puppet:///modules/pharo0mqbridge/pharozmqwebbridge/",
-             recurse => true,
-         }
 
-
-	# install the authors name
+	# install the sources
 	exec { "install Pharo0MQBridge":
 		command  => "/opt/Pharo-1.4-one-click-headless.sh /opt/installPharo0MQBridgeScript.st ",
 		cwd      => "/opt/Pharo-1.4-one-click.app",
