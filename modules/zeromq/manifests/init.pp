@@ -4,7 +4,7 @@ class zeromq {
 	include build
         include unzip
 
-	$version = "2.1.11"
+	$version = "2.2.0"
 
 	# make sure will have working local directory
 	file { "/usr/local/src":
