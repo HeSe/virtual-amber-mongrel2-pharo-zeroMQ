@@ -93,7 +93,6 @@ class pharo {
 	exec { "install RFB Patch":
 		command  => "/opt/Pharo-1.4-one-click-headless.sh /opt/installRFBPatchScript.st ",
 		cwd      => "/opt/Pharo-1.4-one-click.app",
-		before   => Exec["install ZeroMQ"],
 		path     => "/usr/bin:/usr/sbin:/bin",
 
 	}
