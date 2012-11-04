@@ -64,14 +64,14 @@ class pharo {
 		path     => "/usr/bin:/usr/sbin:/bin",
 	}
 
-        # isntall RFB
+        # install RFB
 	exec { "install RFB":
 		command  => "/opt/Pharo-1.4-one-click-headless.sh /opt/installRFBScript.st ",
 		cwd      => "/opt/Pharo-1.4-one-click.app",
 		before   => Exec["install ZeroMQ"],
 		path     => "/usr/bin:/usr/sbin:/bin",
 
-	}
+	}                                                      
 
         # install ZeroMQ
 	exec { "install ZeroMQ":
@@ -80,15 +80,23 @@ class pharo {
 		before   => Exec["copy ZeroMQ"],
 		path     => "/usr/bin:/usr/sbin:/bin",
 	}
-	
+
 	# copy ZeroMQ
 	exec { "copy ZeroMQ":
 		command  => "cp /usr/local/lib/libzmq.so /opt/Pharo-1.4-one-click.app/zmq.so",
 		cwd      => "/opt/Pharo-1.4-one-click.app/",
+		before   => Exec["install RFB Patch"],
 		path     => "/usr/bin:/usr/sbin:/bin",
 	}
-	
 
+        # install RFB Patch
+	exec { "install RFB Patch":
+		command  => "/opt/Pharo-1.4-one-click-headless.sh /opt/installRFBPatchScript.st ",
+		cwd      => "/opt/Pharo-1.4-one-click.app",
+		before   => Exec["install ZeroMQ"],
+		path     => "/usr/bin:/usr/sbin:/bin",
+
+	}
 
 
 }
